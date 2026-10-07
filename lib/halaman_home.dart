@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'halaman_menu.dart';
+import 'halaman_akun.dart';
+import 'halaman_saldo.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -13,7 +15,14 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Container(
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AkunPage()),
+                );
+              },
+              child: Container(
               padding: EdgeInsets.all(20),  //jarak garis box ke icon
               margin: EdgeInsets.all(10), //jarak ke box
               decoration: BoxDecoration(
@@ -38,7 +47,15 @@ class HomePage extends StatelessWidget {
               ],
             ),
             ),
-             Container(
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SaldoPage()),
+                );
+              },
+              child: Container(
               padding: EdgeInsets.all(20),  //jarak garis box ke icon
               margin: EdgeInsets.all(10), //jarak ke box
               decoration: BoxDecoration(
@@ -61,6 +78,7 @@ class HomePage extends StatelessWidget {
                 ),
                 Icon(Icons.arrow_forward_ios),
               ],
+            ),
             ),
             ),
             SizedBox(height: 20), // Memberikan jarak antara box dan tombol
