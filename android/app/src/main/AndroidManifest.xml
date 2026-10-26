@@ -3,6 +3,10 @@
         android:label="perpustakaan_kampus"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDXyluX-WaE3elm_21GO8t4CVdHdXHuZ8A"
+            />
         <activity
             android:name=".MainActivity"
             android:exported="true"
